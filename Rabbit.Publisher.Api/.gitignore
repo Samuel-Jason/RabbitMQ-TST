@@ -1,0 +1,10 @@
+# Ignora a pasta de cache do Visual Studio
+.vs/
+
+# Ignora pastas de build do .NET/C#
+[Bb]in/
+[Oo]bj/
+
+# Ignora outros arquivos temporários
+*.pdb
+*.suo

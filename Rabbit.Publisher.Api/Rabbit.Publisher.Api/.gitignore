@@ -1,0 +1,6 @@
+# Arquivos e Pastas de Cache/Build do VS/Visual Studio Code
+.vs/
+*/[Bb]in/
+*/[Oo]bj/
+*.pdb
+*.suo
