@@ -12,12 +12,13 @@ jobs:
   CI:
     runs-on: ubuntu-latest
     steps:
-      - name: Passo 01 - Checkout do Código
+      - name: Checkout da base de Código
         uses: actions/checkout@v4 # Ação para baixar o código
-      - name: Passo 02 - Criar a imagem dos Microsserviços
-        run: |
-          echo "Comandos reais para docker build e tag aqui"
-          # Ex: docker build -t meu-repo/microsservico:${{ github.sha }} .
+      - name: Docker Login
+          uses: docker/login-action@v3.6.0
+          with:
+            username: ${{ secrets.DOCKERHUB_USR }}
+            password: ${{ secrets.DOCKERHUB_PWD }}
       - name: Passo 03 - Subir as imagens para o Dockerhub
         run: |
           echo "Comandos reais para docker login e push aqui"
